@@ -1,13 +1,32 @@
 # jenkins-aws-demo
+
+# Step 1
+Launching two ec2 instances, so that one can behave as master node, and the second one can behave as slave/agent node. For making these instances I am using terraform code, the same code I used previously, for this one, I defined one more security-group, for the agent node, in which I gave ingress rule only for ssh and deafualt egress rule. for the master node, I gave tcp, ssh, http/https inbound rule and default outbound rule. After launching the instances, we can see the public and private ip address for both the instances. 
 <img width="960" alt="1" src="https://github.com/user-attachments/assets/3684db4a-a8e4-45fb-804d-a55c0dfd5d02" />
 
+We can see both the instances are running.
 <img width="960" alt="2" src="https://github.com/user-attachments/assets/d5d378b5-8a5d-4c33-919c-a1cd9bc09e72" />
+
+# Step 2
+Doing ssh into our master node/instance
 <img width="673" alt="3" src="https://github.com/user-attachments/assets/e62ddc1c-c6c2-4ea6-a942-feaea30ab8df" />
+
+Installing some required packages, enabling jenkins, and starting it, we can see it's loaded and active.
 <img width="960" alt="4" src="https://github.com/user-attachments/assets/4c7a2dd0-7ccb-4477-992a-d3178cc153cb" />
+
+We can run jenkins on the public ip of our master ec2 instance.
 <img width="960" alt="5" src="https://github.com/user-attachments/assets/4e0f9bb6-2286-43c5-9699-fe2a9971b8fd" />
 <img width="960" alt="6" src="https://github.com/user-attachments/assets/483b9d78-d5f2-4e89-b034-012ccdacb717" />
+# jenkins desktop
 <img width="960" alt="7" src="https://github.com/user-attachments/assets/d79156bb-0b0f-4fbd-8c30-49ed0e47790c" />
+# step 3
+
+Doing ssh into agent ec2 instance.
 <img width="674" alt="8" src="https://github.com/user-attachments/assets/45db5c4d-f3a2-4357-841b-27ca7ad2ced2" />
+
+# Step 4
+
+Generating public and private rsa key pair, which will help us to connect our master and slave 
 <img width="960" alt="11" src="https://github.com/user-attachments/assets/b30bc7a4-2536-4626-8516-4b5efc0773f9" />
 <img width="960" alt="10" src="https://github.com/user-attachments/assets/4f9880c2-83be-4912-8609-905901ce7c03" />
 
