@@ -19,7 +19,7 @@ We can run jenkins on the public ip of our master ec2 instance.
 
 
 <img width="960" alt="6" src="https://github.com/user-attachments/assets/483b9d78-d5f2-4e89-b034-012ccdacb717" />
-# jenkins desktop
+# Jenkins desktop
 <img width="960" alt="7" src="https://github.com/user-attachments/assets/d79156bb-0b0f-4fbd-8c30-49ed0e47790c" />
 
 
