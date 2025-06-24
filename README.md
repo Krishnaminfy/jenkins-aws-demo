@@ -57,26 +57,43 @@ It failed at first, because while giving global config I used the wrong name, we
 Finally I got my agent connected successfully. Class assignment is over now module 4 and 5 is left.
 <img width="960" alt="14" src="https://github.com/user-attachments/assets/9872ec97-085b-48cf-8be5-b7955ce3b326" />
 
+
+
+<img width="960" alt="13" src="https://github.com/user-attachments/assets/411676db-a1b5-4080-87c5-6bd7a59558d5" />
+
 # Step 7 
 
 # Module 4 
 
 Creating app.js, package,json and Jenkins file.
 
-<img width="960" alt="13" src="https://github.com/user-attachments/assets/411676db-a1b5-4080-87c5-6bd7a59558d5" />
+
+<img width="933" alt="17" src="https://github.com/user-attachments/assets/0dde4b15-164c-4ab8-b7dd-8090e94b92e1" />
 
 # Step 8
 
 Pushing it to github.
-
-
-<img width="933" alt="17" src="https://github.com/user-attachments/assets/0dde4b15-164c-4ab8-b7dd-8090e94b92e1" />
-
 <img width="960" alt="18" src="https://github.com/user-attachments/assets/53a99680-c279-48a4-ae12-fc2218e78daf" />
+
+# Step 9
+
+Making my first job, "my-first-pipeline-krishna"
+
+Configuring it, we have to select the option to get the jenkins file from our github repository, if the repository is private, do give your credentials, if it is public then it's fine, update your master/main brach, whatever convention you follow, and in the end give jenkins, because we are running it through jenkinsfile.
 
 <img width="960" alt="19" src="https://github.com/user-attachments/assets/78373aa6-24e2-4bf2-9219-edc6183c1e35" />
 
+# Step 10 
+
+Building the job, at first it was failed, because I didnt gave "linux" as label while making my agent node, and in our jenkins file, we have specified, "agent label'linux'".
+
+# Tip
+
+check your console output to debug the error.
+
 <img width="960" alt="21" src="https://github.com/user-attachments/assets/682bdeaf-728b-4138-a8d4-14e672711410" />
+
+After adding 'linux' as a label for my agent node, my job built successfuly. We can see each part specified in the pipeline worked well.
 
 <img width="960" alt="lf" src="https://github.com/user-attachments/assets/227cbeb7-550d-4537-9f10-682c8f2bc15f" />
 
@@ -84,5 +101,11 @@ Pushing it to github.
 
 <img width="960" alt="final" src="https://github.com/user-attachments/assets/16d391a6-3e73-470e-b4af-8a6a912ba5cb" />
 
+# Step 11
+
+Most important step, detroying resources after completing the task, that is I used terraform to make instances, so I can delete it in a go. 
+
 <img width="960" alt="23" src="https://github.com/user-attachments/assets/f7cdda46-7f52-431d-835c-ed10f6c52b97" />
+
+# task complete.
 
