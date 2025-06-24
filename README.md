@@ -107,5 +107,5 @@ Most important step, detroying resources after completing the task, that is I us
 
 <img width="960" alt="23" src="https://github.com/user-attachments/assets/f7cdda46-7f52-431d-835c-ed10f6c52b97" />
 
-# task complete.
+# Task completed.
 
