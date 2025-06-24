@@ -109,3 +109,19 @@ Most important step, detroying resources after completing the task, that is I us
 
 # Task completed.
 
+# Module 6
+
+To create a Jenkins pipeline that automatically builds, tests, and deploys a web application to a dedicated EC2 instance (the "App Server") using SSH.
+
+To add this or to perform this step, we need to update couple of things.
+
+# 1 Jenkinsfile
+
+We need to update our jenkins file, so it can automate:- code, build, test, deploy, we need to add these stages in our Jenkinsfile.
+
+# 2 Configure github webhook
+
+We need to add a Webhook in our github repository, which can trigger Jenkinsfile on every push.
+
+Rest of things will be same, as we are automating in this step. So by updating these 2 things we will be able to automate the steps mentioned above.
+
