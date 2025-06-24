@@ -26,20 +26,48 @@ Doing ssh into agent ec2 instance.
 
 # Step 4
 
-Generating public and private rsa key pair, which will help us to connect our master and slave 
+Generating public and private rsa key pair, using "ssh keygen -t rsa" inside jenkins bash, which will help us to connect our master and slave.
 <img width="960" alt="11" src="https://github.com/user-attachments/assets/b30bc7a4-2536-4626-8516-4b5efc0773f9" />
+
+# step 5
+ Setting the public key from master node into slave node authorized keys, using this command echo "PUBLIC_KEY_FROM_MASTER_HERE" >> /home/ec2-user/.ssh/authorized_keys.
+ 
 <img width="960" alt="10" src="https://github.com/user-attachments/assets/4f9880c2-83be-4912-8609-905901ce7c03" />
+
+Installing node in the agent node, because we want to run a nodejs application using our agent/slave node.
 
 <img width="916" alt="15" src="https://github.com/user-attachments/assets/37656504-36f6-468f-ac05-d2e0e97a3cb7" />
 
+We can check node version.
+
 <img width="913" alt="16" src="https://github.com/user-attachments/assets/b360c0eb-cdbb-4802-b5ec-a00d1d2c4594" />
+
+# Step 6
+
+Till now what we did is, making two ec2 instances, one is master, the other one is agent. we created keys, and set public key in the agent node, it will work like the address or username, just for easy understanding I am using these terms. Now for using the agent node, we have to make a node on console running on our master node, and provide it our global credential, in which we will store our private key(which will work like password). This is my understanding, the overview what we our doing, and how we are connecting the nodes. 
+
+So after setting the global config, I made the node.
 
 <img width="960" alt="9" src="https://github.com/user-attachments/assets/d3cb09a2-d5d8-4740-9a5d-9fe0fdaba340" />
 
+It failed at first, because while giving global config I used the wrong name, we should use ec2-user, than only it will authenticate our slave node, after doing this step also, my node was showing offline. the reason was, While making the ec2 instance for slave, I forget to gave the egress rule for internet, because on terraform we have to code it, so I forgot, but after enabling it and installing java My node is no more offline.
+
 <img width="960" alt="12" src="https://github.com/user-attachments/assets/0f90f1b5-ce40-43d6-929f-99adda670066" />
+
+Finally I got my agent connected successfully. Class assignment is over now module 4 and 5 is left.
 <img width="960" alt="14" src="https://github.com/user-attachments/assets/9872ec97-085b-48cf-8be5-b7955ce3b326" />
 
+# Step 7 
+
+# Module 4 
+
+Creating app.js, package,json and Jenkins file.
+
 <img width="960" alt="13" src="https://github.com/user-attachments/assets/411676db-a1b5-4080-87c5-6bd7a59558d5" />
+
+# Step 8
+
+Pushing it to github.
 
 
 <img width="933" alt="17" src="https://github.com/user-attachments/assets/0dde4b15-164c-4ab8-b7dd-8090e94b92e1" />
