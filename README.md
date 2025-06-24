@@ -1,7 +1,7 @@
 # jenkins-aws-demo
 
 # Step 1
-Launching two ec2 instances, so that one can behave as master node, and the second one can behave as slave/agent node. For making these instances I am using terraform code, the same code I used previously, for this one, I defined one more security-group, for the agent node, in which I gave ingress rule only for ssh and deafualt egress rule. for the master node, I gave tcp, ssh, http/https inbound rule and default outbound rule. After launching the instances, we can see the public and private ip address for both the instances. 
+Launching two ec2 instances, so that one can behave as master node, and the second one can behave as slave/agent node. For making these instances I am using terraform code, the same code I used previously, for this one, I defined one more security-group, for the agent node, in which I gave ingress rule only for ssh and deafualt egress rule, for the master node, I gave tcp, ssh, http/https inbound rule and default outbound rule. After launching the instances, we can see the public and private ip address for both the instances. 
 <img width="960" alt="1" src="https://github.com/user-attachments/assets/3684db4a-a8e4-45fb-804d-a55c0dfd5d02" />
 
 We can see both the instances are running.
@@ -16,30 +16,34 @@ Installing some required packages, enabling jenkins, and starting it, we can see
 
 We can run jenkins on the public ip of our master ec2 instance.
 <img width="960" alt="5" src="https://github.com/user-attachments/assets/4e0f9bb6-2286-43c5-9699-fe2a9971b8fd" />
+
+
 <img width="960" alt="6" src="https://github.com/user-attachments/assets/483b9d78-d5f2-4e89-b034-012ccdacb717" />
 # jenkins desktop
 <img width="960" alt="7" src="https://github.com/user-attachments/assets/d79156bb-0b0f-4fbd-8c30-49ed0e47790c" />
-# step 3
+
+
+# Step 3
 
 Doing ssh into agent ec2 instance.
 <img width="674" alt="8" src="https://github.com/user-attachments/assets/45db5c4d-f3a2-4357-841b-27ca7ad2ced2" />
 
 # Step 4
 
-Generating public and private rsa key pair, using "ssh keygen -t rsa" inside jenkins bash, which will help us to connect our master and slave.
+Generating public and private rsa key pair in master node, using "ssh keygen -t rsa" inside jenkins bash, which will help us to connect our master and slave.
 <img width="960" alt="11" src="https://github.com/user-attachments/assets/b30bc7a4-2536-4626-8516-4b5efc0773f9" />
 
-# step 5
+# Step 5
  Setting the public key from master node into slave node authorized keys, using this command echo "PUBLIC_KEY_FROM_MASTER_HERE" >> /home/ec2-user/.ssh/authorized_keys.
  
 <img width="960" alt="10" src="https://github.com/user-attachments/assets/4f9880c2-83be-4912-8609-905901ce7c03" />
 
-Installing node in the agent node, because we want to run a nodejs application using our agent/slave node.
 
+Installing node in the agent node, because we want to run a nodejs application using our agent/slave node.
 <img width="916" alt="15" src="https://github.com/user-attachments/assets/37656504-36f6-468f-ac05-d2e0e97a3cb7" />
 
-We can check node version.
 
+We can check node version.
 <img width="913" alt="16" src="https://github.com/user-attachments/assets/b360c0eb-cdbb-4802-b5ec-a00d1d2c4594" />
 
 # Step 6
@@ -109,7 +113,7 @@ Most important step, detroying resources after completing the task, that is I us
 
 # Task completed.
 
-# Module 6
+# Module 6 Theory
 
 To create a Jenkins pipeline that automatically builds, tests, and deploys a web application to a dedicated EC2 instance (the "App Server") using SSH.
 
