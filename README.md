@@ -1,4 +1,4 @@
-# jenkins-aws-demo
+# Jenkins-aws-demo
 
 # Step 1
 Launching two ec2 instances, so that one can behave as master node, and the second one can behave as slave/agent node. For making these instances I am using terraform code, the same code I used previously, for this one, I defined one more security-group, for the agent node, in which I gave ingress rule only for ssh and deafualt egress rule, for the master node, I gave tcp, ssh, http/https inbound rule and default outbound rule. After launching the instances, we can see the public and private ip address for both the instances. 
